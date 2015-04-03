@@ -1,0 +1,6 @@
+_razor()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W " brokers nodes policies repos tags tasks add-policy-tag create-broker create-policy create-repo create-tag create-task delete-broker delete-node delete-policy delete-repo delete-tag disable-policy enable-policy modify-node-metadata modify-policy-max-count move-policy reboot-node reinstall-node remove-node-metadata remove-policy-tag set-node-desired-power-state set-node-ipmi-credentials update-node-metadata update-tag-rule" -- $cur) )
+}
+complete -F _razor razor
